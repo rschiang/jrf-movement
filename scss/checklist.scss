@@ -15,7 +15,7 @@ body::before {
     width: 100%;
     height: 35vh;
     z-index: 0;
-    margin-bottom: -5vh;
+    margin-bottom: -25vh;
 }
 
 #socialMovementCrime {
@@ -24,14 +24,21 @@ body::before {
     z-index: 1;
     margin: auto;
     padding: 0 1em;
+}
 
-    .questions, .answers {
-        background: #fff;
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-                    0 1px 10px 0 rgba(0, 0, 0, 0.12),
-                    0 2px 4px -1px rgba(0, 0, 0, 0.4);
-        margin-bottom: 1em;
-        padding: 1em 2em;
+.questions, .answers {
+    background: #fff;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+                0 1px 10px 0 rgba(0, 0, 0, 0.12),
+                0 2px 4px -1px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1em;
+    padding: 1em 2em;
+
+    h1 {
+        margin: 0;
+        font-family: "Book Antiqua", "HanWangMingHeavy", serif;
+        font-size: 2.125em;
+        line-height: 4rem;
     }
 }
 

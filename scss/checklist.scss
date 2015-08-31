@@ -43,6 +43,10 @@ body::before {
         top: .75em; left: 0;
         width: 1em;
         height: 1em;
+
+        &:checked + .question {
+            font-weight: bold;
+        }
     }
 
     .question {

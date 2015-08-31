@@ -33,6 +33,8 @@ body::before {
     left: 0;
     width: 1em;
     height: 1em; }
+    .questionRow > input[type="checkbox"]:checked + .question {
+      font-weight: bold; }
   .questionRow .question {
     display: block;
     margin: 0 -2em;

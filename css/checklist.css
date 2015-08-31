@@ -62,4 +62,13 @@ button, .question {
   button:active, .question:active {
     background: #9e9e9e; }
 
+.answerRow .answer {
+  font-size: 1.15em;
+  line-height: 2rem; }
+.answerRow .answerDetail {
+  margin: 1em 0; }
+.answerRow:not(:last-child) {
+  border-bottom: 1px #f5f5f5 solid;
+  margin-bottom: 1em; }
+
 /*# sourceMappingURL=checklist.css.map */

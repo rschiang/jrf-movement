@@ -116,7 +116,7 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
         this.props.onChange(event.target.checked);
       },
       render: function() {
-          var checkboxId = "checkbox-" + this.props.score;
+        var checkboxId = "checkbox-" + this.props.score;
         return (
           <div className="questionRow">
             <input type="checkbox" id={checkboxId} defaultChecked={false} onChange={this.handleChange} />

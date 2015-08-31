@@ -47,7 +47,8 @@ body::before {
 
     .question {
         display: block;
-        padding: .5em 1em .5em 2em;
+        margin: 0 -2em;
+        padding: .5em 3em .5em 4em;
         font-family: "Hannotate TC", cursive;
     }
 
@@ -68,13 +69,11 @@ button {
     color: #009688;
     font-size: .875em;
     font-weight: bold;
+}
+
+button, .question {
     transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover {
-        background: #e0e0e0;
-    }
-
-    &:active {
-        background: #9e9e9e;
-    }
+    &:hover { background: #e0e0e0; }
+    &:active { background: #9e9e9e; }
 }

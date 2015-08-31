@@ -167,7 +167,7 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
             return (<AnswerRow answer={item.answer} detail={item.detail} key={item.key} />);
           } else {
             console.log('dont render', item.key);
-            return <div></div>;
+            return null;
           }
         });
 

@@ -11,3 +11,4 @@ github:
 	git checkout master -- index.html css/checklist.css
 	git commit -am "Update static page content"
 	git push origin gh-pages -u
+	git checkout master

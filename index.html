@@ -208,14 +208,20 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
       render: function(){
         if (this.state.showResult) {
           return (<div>
-            <QuestionTable questionData={this.props.questionData} sendValue={this.sendValue} />
-            <Result clickHandler={this.getResult} />
-            <AnswerTable showResult={this.state.showResult} answerData={this.props.answerData} score={this.state.score} />
+            <div className="questions">
+              <QuestionTable questionData={this.props.questionData} sendValue={this.sendValue} />
+              <Result clickHandler={this.getResult} />
+            </div>
+            <div className="answers">
+              <AnswerTable showResult={this.state.showResult} answerData={this.props.answerData} score={this.state.score} />
+            </div>
             </div>);
         } else {
           return (<div>
-            <QuestionTable questionData={this.props.questionData} sendValue={this.sendValue} />
-            <Result clickHandler={this.getResult} />
+            <div className="questions">
+              <QuestionTable questionData={this.props.questionData} sendValue={this.sendValue} />
+              <Result clickHandler={this.getResult} />
+            </div>
             </div>);
         }
       }

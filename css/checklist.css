@@ -34,6 +34,7 @@ body::before {
     width: 1em;
     height: 1em; }
   .questionRow .question {
+    display: block;
     padding: .5em 1em .5em 2em;
     font-family: "Hannotate TC", cursive; }
   .questionRow:not(:last-child) {

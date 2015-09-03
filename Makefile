@@ -1,10 +1,10 @@
 .PHONY: watch
 
 watch:
-	scss --watch scss:css --style=compressed --sourcemap=none
+	scss --watch scss:css --style=compressed --sourcemap=none --compass
 
 compile:
-	scss --update scss:css --style=compressed --sourcemap=none
+	scss --update scss:css --style=compressed --sourcemap=none --compass
 
 github:
 	git checkout gh-pages

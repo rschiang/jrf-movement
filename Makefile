@@ -8,7 +8,7 @@ compile:
 
 github:
 	git checkout gh-pages
-	git checkout master -- index.html css/checklist.css
+	git checkout master -- index.html css/ images/
 	git commit -am "Update static page content"
 	git push origin gh-pages -u
 	git checkout master

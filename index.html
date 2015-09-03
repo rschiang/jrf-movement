@@ -18,6 +18,9 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
   </head>
   <body>
     <div id="socialMovementCrime"></div>
+    <footer>
+        <div>2015 Judicial Reform Foundation. Source code available on <a href="https://github.com/rschiang/jrf-movement/" rel="external">GitHub</a>.</div>
+    </footer>
     <script type="text/jsx">
       var questionData = [
         { question: "我和警察發生推擠。", score: "a", done: false },
@@ -184,7 +187,7 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
 
     var Result = React.createClass({
       render: function(){
-        return (<button onClick={this.props.clickHandler} >這些犯什麼法呢？看看結果 »</button>);
+        return (<button onClick={this.props.clickHandler} >這些可能犯什麼法呢？看看結果 »</button>);
       }
     });
 

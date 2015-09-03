@@ -165,8 +165,10 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
       render: function() {
         var score = this.props.score;
         var answerData = this.props.answerData;
+        var answersEmpty = true;
         var answers = answerData.map(function(item){
           if (item.calculate(score)) {
+            answersEmpty = false;
             console.log('render answer', item.key);
             return (<AnswerRow answer={item.answer} detail={item.detail} key={item.key} />);
           } else {
@@ -175,12 +177,14 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
           }
         });
 
-        if (this.props.showResult) {
-          return <div className="answerTable">
-            {answers}
-          </div>
+        if (this.props.showResult && !answersEmpty) {
+          return (<div className="answers">
+            <div className="answerTable">
+              {answers}
+            </div>
+          </div>)
         } else {
-          return <div></div>;
+          return null;
         }
       }
     });
@@ -218,9 +222,7 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
               <QuestionTable questionData={this.props.questionData} sendValue={this.sendValue} />
               <Result clickHandler={this.getResult} />
             </div>
-            <div className="answers">
-              <AnswerTable showResult={this.state.showResult} answerData={this.props.answerData} score={this.state.score} />
-            </div>
+            <AnswerTable showResult={this.state.showResult} answerData={this.props.answerData} score={this.state.score} />
             </div>);
         } else {
           return (<div>

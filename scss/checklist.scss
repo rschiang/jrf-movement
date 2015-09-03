@@ -54,6 +54,7 @@ body::before {
 
         &::after {
             content: '';
+            display: block;
             clear: both;
         }
     }

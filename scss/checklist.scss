@@ -26,7 +26,7 @@ body {
 }
 
 body::before {
-    background: #333 url('https://farm8.staticflickr.com/7161/13290874884_57ed75e0c8_h.jpg') center / cover no-repeat fixed;
+    background: #333 url('../images/cover.jpg') center / cover no-repeat fixed;
     content: "黃毛 | YELLOW Mao on Flickr, CC BY-NC-ND 2.0";
     display: block;
     width: 100%;
@@ -81,6 +81,10 @@ body::before {
     > button {
         width: 100%;
         font-size: inherit;
+    }
+
+    &:empty {
+        display: none;
     }
 }
 

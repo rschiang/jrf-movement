@@ -8,15 +8,19 @@
     <title>社運測測看</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" href="css/checklist.css">
-    <script type="text/javascript">
-//<![CDATA[
-try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"4c8edbe3ec03bd7234aa21e6f5642361",petok:"33dcd4abe5c45eb44a361f429831850d16563397-1441007294-1800",betok:"c4b23bdb64d36f2a82340361995d4a4091ae47d2-1441007294-120",zone:"jrf.org.tw",rocket:"0",apps:{"abetterbrowser":{"ie":"6"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=e9627cd26a/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
-//]]>
-</script>
+    <meta name="description" content="參加社會運動可能會遇到哪些司法追訴？快來測測看！" />
+    <meta name="keywords" content="社會運動,法律追訴,司法" />
+    <meta property="og:title" content="社運測測看" />
+    <meta property="og:description" content="參加社會運動可能會遇到哪些司法追訴？快來測測看！" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://protest.jrf.org.tw/images/fb_share.jpg" />
+    <meta property="og:site_name" content="社運測測看" />
+    <link rel="icon" type="image/png" href="/images/icon.png">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
   </head>
   <body>
+
     <div class="socialMovementCrime"></div>
     <footer>
         <div>2015 Judicial Reform Foundation. Source code available on <a href="https://github.com/rschiang/jrf-movement/" rel="external">GitHub</a>.</div>
@@ -236,7 +240,7 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
       }
     });
 
-    React.render(<SocialMovementCrime questionData={questionData} defaultScore={defaultScore} answerData={answerData} />, document.getElementById('socialMovementCrime'));
+    React.render(<SocialMovementCrime questionData={questionData} defaultScore={defaultScore} answerData={answerData} />, document.getElementsByClassName('socialMovementCrime')[0]);
     </script>
 
   </body>

@@ -20,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
   </head>
   <body>
+
     <div class="socialMovementCrime"></div>
     <footer>
         <div>2015 Judicial Reform Foundation. Source code available on <a href="https://github.com/rschiang/jrf-movement/" rel="external">GitHub</a>.</div>
@@ -239,7 +240,7 @@
       }
     });
 
-    React.render(<SocialMovementCrime questionData={questionData} defaultScore={defaultScore} answerData={answerData} />, document.getElementById('socialMovementCrime'));
+    React.render(<SocialMovementCrime questionData={questionData} defaultScore={defaultScore} answerData={answerData} />, document.getElementsByClassName('socialMovementCrime')[0]);
     </script>
 
   </body>

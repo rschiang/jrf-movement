@@ -1,4 +1,4 @@
-.PHONY: watch
+.PHONY: watch compile github
 
 watch:
 	scss --watch scss:css --style=compressed --sourcemap=none --compass

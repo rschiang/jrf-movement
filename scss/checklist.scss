@@ -173,24 +173,28 @@ button, .question {
         margin: 0 -0.57em;
     }
 
-    .answerDetail {
-        clear: both;
-        margin: .5em 0 1em;
+    &:not(:last-child) {
+        border-bottom: 1px #f5f5f5 solid;
+        margin-bottom: 1em;
+    }
+}
+
+.answerDetail {
+    clear: both;
+    margin: .5em 0 1em;
+
+    /* to make static (i.e. without accordion) work */
+    .accordion & {
         overflow: scroll;
         max-height: 0;
         transition: max-height #{$common-animation};
     }
 
-    &.open .answerDetail {
+    .accordion.open & {
         max-height: 10em;
         @include on-desktop {
             max-height: 20em;
         }
-    }
-
-    &:not(:last-child) {
-        border-bottom: 1px #f5f5f5 solid;
-        margin-bottom: 1em;
     }
 }
 

@@ -167,8 +167,25 @@ button, .question {
         line-height: 2rem;
     }
 
+    button.toggle {
+        float: right;
+        padding: 0 0.57em;
+        margin: 0 -0.57em;
+    }
+
     .answerDetail {
+        clear: both;
         margin: .5em 0 1em;
+        overflow: scroll;
+        max-height: 0;
+        transition: max-height #{$common-animation};
+    }
+
+    &.open .answerDetail {
+        max-height: 10em;
+        @include on-desktop {
+            max-height: 20em;
+        }
     }
 
     &:not(:last-child) {

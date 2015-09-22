@@ -196,6 +196,21 @@ button, .question {
             max-height: 20em;
         }
     }
+
+    @import "compass/reset/utilities";
+    @import "compass/typography/links";
+    .references {
+        @include reset-box-model;
+        @include reset-list-style;
+
+        li {
+            padding-top: .5em;
+        }
+
+        a {
+            @include hover-link;
+        }
+    }
 }
 
 footer {

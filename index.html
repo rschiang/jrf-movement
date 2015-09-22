@@ -165,7 +165,13 @@
           <div className="answer">
             {this.props.answer}
           </div>
-          <div className="answerDetail" dangerouslySetInnerHTML={{__html: this.props.detail}} />
+          <div className="answerDetail">
+            {this.props.detail}
+            <ul className="references">
+              <li><a href="#">「妨害公務」再逞威 華光擋拆五被告判拘役</a></li>
+              <li><a href="#">太陽花學運 北檢起訴黃國昌、林飛帆等118人</a></li>
+            </ul>
+          </div>
         </div>);
       }
     });

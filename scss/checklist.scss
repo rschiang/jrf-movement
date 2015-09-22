@@ -204,7 +204,8 @@ button, .question {
         @include reset-list-style;
 
         li {
-            padding-top: .5em;
+            padding: .5rem 0 0 2em;
+            font-size: .875em;
         }
 
         a {

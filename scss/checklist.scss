@@ -214,6 +214,18 @@ button, .question {
     }
 }
 
+.footnotes {
+    padding: 1em 2em 2em;
+    margin: auto;
+    max-width: $desktop-width;
+
+    p {
+        letter-spacing: 0.05em;
+        line-height: 1.5em;
+        text-indent: 2em;
+    }
+}
+
 footer {
     background: #212121;
     color: #616161;

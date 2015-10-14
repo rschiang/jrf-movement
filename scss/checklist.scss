@@ -134,21 +134,29 @@ body::before {
     margin: .43em -0.7em -.57em;
 }
 
-button {
-    background: #fff;
+@mixin material-button($color) {
     border: 0;
     outline: none;
     padding: 0.7em 0.57em;
-    color: #009688;
+    color: $color;
     font-size: .875em;
     font-weight: bold;
 }
 
-button, .question {
+@mixin material-hover($hover-color, $active-color) {
     transition: background #{$common-animation};
 
-    &:hover { background: #e0e0e0; }
-    &:active { background: #9e9e9e; }
+    &:hover { background: $hover-color; }
+    &:active { background: $active-color; }
+}
+
+button {
+    @include material-button(#009688);
+    background: #fff;
+}
+
+button, .question {
+    @include material-hover(#e0e0e0, #9e9e9e);
 }
 
 @import "compass/css3/animation";
@@ -215,15 +223,38 @@ button, .question {
 }
 
 .footnotes {
+    color: #004d40;
     padding: 1em 2em 2em;
-    margin: auto;
+    margin: 1em auto 0;
     max-width: $desktop-width;
 
     p {
         letter-spacing: 0.05em;
         line-height: 1.5em;
         text-indent: 2em;
-        text-align: center;
+    }
+
+    @include on-desktop {
+        border-top: #b2dfdb 1px dashed;
+    }
+}
+
+.large-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .link {
+        @include material-button(#00796b);
+        @include material-hover(#bdbdbd, #757575);
+        display: block;
+        text-decoration: none;
+
+        @include on-desktop {
+            display: inline-block;
+            text-align: center;
+            width: 33%;
+        }
     }
 }
 
